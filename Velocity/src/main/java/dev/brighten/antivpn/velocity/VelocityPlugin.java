@@ -16,7 +16,7 @@ import java.nio.file.Path;
 import java.util.logging.Logger;
 
 @Getter
-@Plugin(id = "kaurivpn", name = "KauriVPN", version = "1.7.1", authors = {"funkemunky"})
+@Plugin(id = "kaurivpn", name = "KauriVPN", version = "1.8.4", authors = {"funkemunky"})
 public class VelocityPlugin {
 
     private final ProxyServer server;
@@ -45,7 +45,7 @@ public class VelocityPlugin {
 
         if(AntiVPN.getInstance().getVpnConfig().metrics()) {
             logger.info("Starting metrics...");
-            Metrics metrics = metricsFactory.make(this, 12791);
+            metricsFactory.make(this, 12791);
         }
 
         logger.info("Registering commands...");
